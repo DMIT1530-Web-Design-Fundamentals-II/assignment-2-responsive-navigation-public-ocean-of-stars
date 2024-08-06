@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('CooperHewitt-Heavy.woff2') format('woff2'),
+         url('CooperHewitt-Heavy.woff') format('woff');
+    font-weight: normal;
+}
+
+:root {
+    --dark-grey: #3a3a3a;
+    --light-grey: #707070;
+    --off-white: #f2f2f2;
+    --white: #ffffff;
+    --ugly-green: #727812;
+    --yellow: #b29124;
+    --orange: #c65614;
+    --cooper-font: 'Cooper Hewitt', sans-serif;
+    --merriweather: "Merriweather Sans", sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inner-container {
+    margin: auto;
+    max-width: 40rem;
+    padding: 3rem 1rem;
+}
+
+header .inner-container {
+    padding: unset;
+}
+
+.sr-only {
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+}
+
+/* Header/Nav */
+
+header {
+    background-color: var(--dark-grey);
+    padding: 1rem;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.toggle-btn {
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: lowercase;
+}
+
+.toggle-btn:hover img {
+    color: var(--ugly-green);
+    fill: var(--ugly-green);
+}
+
+header img {
+    max-width: 2rem;
+    display: block;
+    z-index: 999;
+}
+
+.first-link {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.first-link img {
+    width: 1rem;
+    margin-left: 1rem;
+}
+
+
+.first-link img {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    background-color: var(--dark-grey)
+}
+
+.show-nav {
+    max-height: unset;
+    overflow: visible;
+    border-bottom: 1px solid #fff;
+}
+
+nav li {
+    margin: 0.5rem 0;
+}
+
+nav li a {
+    display: block;
+}
+
+nav li a:hover {
+    color: var(--ugly-green);
+    text-decoration: none;
+}
+
+/*  */
+
+body {
+    font-family: var(--merriweather);
+    color: var(--dark-grey);
+}
+
+h1, 
+h2,
+h3 {
+    font-family: var(--cooper-font);
+}
